@@ -1,38 +1,169 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 470px;
+  width: 100vw;
+  gap: 50px;
+}
+
+.circle {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  background-color: grey;
+}
+
+.stopwatch {
+  height: 60vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.stopwatch-time {
+  height: 90px;
+  width: auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.stopwatch-time:hover {
+  animation: shadow 0.3s 1 forwards;
+}
+
+.stopwatch-btn {
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  background-color: red;
+}
+
+.btn-stopwatch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  width: 300px;
+}
+
+.about {
+  height: 400px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.foot {
+  height: 200px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#timezone{
+  height: 50px;
+  width: 600px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(27, 24, 24);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App {
+  height: 100vh;
+  width: 100vw;
 }
 
-@keyframes App-logo-spin {
+.h {
+  font-weight: bolder;
+  font-size: 70px;
+}
+
+.wave-container {
+  width: 100vw;
+  height: 200px;
+  background: #00bfff;
+  opacity: 0.3;
+}
+
+.wave {
+  position: relative;
+  bottom: 100px;
+  left: 50%;
+  width: 200%;
+  height: 200px;
+  background: #00bfff;
+  opacity: 0.5;
+  border-radius: 50%;
+  animation: wave-animation 4s linear infinite;
+  transform: translateX(-50%);
+}
+
+.time {
+  height: 90px;
+  width: auto;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.time:hover {
+  animation: shadow 0.3s 1 forwards;
+}
+
+@keyframes shadow {
+  from{
+    box-shadow: 0px 5px 5px 5px white;
+  }
+
+  to{
+    box-shadow: 0 5px 5px 5px rgb(128, 115, 115);
+  }
+}
+
+.wave2 {
+  position: relative;
+  bottom: 100px;
+  left: 50%;
+  width: 200%;
+  height: 200px;
+  background: #00bfff;
+  opacity: 0.5;
+  border-radius: 50%;
+  animation: wave-animation 6s linear infinite;
+  opacity: 0.5;
+  transform: translateX(-50%);
+}
+
+.wave3 {
+  position: relative;
+  width: 200%;
+  height: 200px;
+  bottom: 100px;
+  left: 50%;
+  background: #00bfff;
+  opacity: 0.5;
+  border-radius: 50%;
+  animation: wave-animation 8s linear infinite;
+  opacity: 0.2;
+  transform: translateX(-50%);
+}
+
+@keyframes wave-animation {
   from {
-    transform: rotate(0deg);
+    top: -20px;
   }
   to {
-    transform: rotate(360deg);
+    top: 10px;
   }
 }
